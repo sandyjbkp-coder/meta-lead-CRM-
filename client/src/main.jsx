@@ -1,7 +1,12 @@
-node: >20, <20
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-import react from 'react'
-import ReactDom from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
-Library import App
-from './app'
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);

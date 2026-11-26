@@ -27,8 +27,8 @@ jobs:
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Install dependencies (root)
-        run: npm ci --verbose
+      - name: Install dependencies (root) - regenerate lockfile
+        run: npm install --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

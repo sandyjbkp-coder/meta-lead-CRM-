@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - integration/meta-crm-local
   pull_request:
     branches:
       - main

@@ -1,9 +1,0 @@
-[DB] Connected to SQLite: ./data/crm.sqlite
-[DB] SQLite models initialized with indexes
-[MIGR] Running 3 migrations...
-[MIGR] Applied 001_init.sql
-[MIGR] Applied 002_meta_integration.sql
-[MIGR] Done
-[BOOT] Meta CRM Server listening on port 4000
-[BOOT] Environment: development
-[BOOT] Database: SQLite

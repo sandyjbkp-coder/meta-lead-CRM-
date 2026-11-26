@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - integration/meta-crm-local
   pull_request:
     branches:
       - main
@@ -17,17 +18,14 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
-
-      - name: Verify lockfiles exist
-        run: ls -la package-lock.json server/package-lock.json client/package-lock.json
 
       - name: Install dependencies (root) - regenerate lockfile
         run: npm install --verbose

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { DragDropContext, Droppable, Draggable } from '@dnd-kit/core';
+import { DndContext, Droppable, Draggable } from '@dnd-kit/core';
 import { GripVertical } from 'lucide-react';
 import api from '../lib/api';
 
@@ -61,7 +61,7 @@ export default function Pipeline() {
     <div className="p-6">
       <h1 className="text-3xl font-bold mb-6">Pipeline</h1>
       <div className="overflow-x-auto">
-        <DragDropContext onDragEnd={handleDragEnd}>
+        <DndContext onDragEnd={handleDragEnd}>
           <div className="flex gap-4 min-w-max">
             {STATUSES.map(status => (
               <div key={status} className="w-64 flex-shrink-0">
@@ -109,7 +109,7 @@ export default function Pipeline() {
               </div>
             ))}
           </div>
-        </DragDropContext>
+        </DndContext>
       </div>
     </div>
   );
